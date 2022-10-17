@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue 5</title>
+</head>
+<body>
+  <script>
+    // Задание 1
+    const styles = ["Джаз", "Блюз"]
+    console.log(styles)
+
+    styles.push("Рок-н-Ролл")
+    console.log(styles)
+
+    styles.splice(- 2, 1, "Классика")
+    console.log(styles)
+
+    console.log(styles.shift())
+    console.log(styles)
+
+    styles.unshift("Рэп", "Регги")
+    console.log(styles)
+
+
+    // Задание 2
+
+    function lastElem(arr) {
+      return arr[arr.length-1]
+    }
+    console.log(lastElem(styles))
+
+
+    // Задание 3
+    function sum() {
+      let x = [0.3, 5.2, 9.4, 8]
+      let y = [43, 5, 3.4, 8, 20]
+
+      let c = (x.reduce((sum1, item) => sum1 + item, 0) + y.reduce((sum2, item) => sum2 + item, 0))/2
+      return c
+    }
+
+    console.log(sum())
+
+    // Задание 4
+    let m = +prompt("Введите число m: ")
+    let n = +prompt("Введите число n: ")
+    function factorial(x) {
+      return x ? x * factorial(x - 1) : 1
+    }
+
+    let c = (factorial(m) + factorial(n))/factorial(m+1)
+    alert(c)
+
+  </script>
+</body>
+</html>
